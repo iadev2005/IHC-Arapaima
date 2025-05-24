@@ -218,6 +218,20 @@ export function Culture() {
                                 </motion.h2>
                             </div>
 
+                            {/* Logo de la página */}
+                            <motion.div
+                                className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer hidden md:block"
+                                onClick={() => navigate('/')}
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                            >
+                                <img
+                                    src="/assets/logo/logo.svg"
+                                    alt="Logo"
+                                    className="w-40 md:w-60 h-auto"
+                                />
+                            </motion.div>
+
                             {/* Botón de volver para desktop */}
                             <div className="flex-1 justify-end hidden md:flex">
                                 <BackButton to="/" />
