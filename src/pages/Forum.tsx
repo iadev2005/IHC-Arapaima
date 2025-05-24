@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getForumData, subscribeToForumChanges, getUserVotes, votePost, updateForumData, type ForumData } from '@/services/forumService';
 import { MobileMenu } from './components/MobileMenu';
+import { BackButton } from './components/BackButton';
 
 const getPageTransition = (from: string | undefined) => {
     if (from === 'post') {
@@ -242,6 +243,7 @@ export function Forum() {
                                 </motion.h2>
                             </div>
 
+                            {/* Logo para desktop */}
                             <motion.div
                                 className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer hidden md:block"
                                 onClick={() => navigate('/')}
@@ -255,9 +257,14 @@ export function Forum() {
                                 />
                             </motion.div>
 
+                            {/* Botón de volver para desktop */}
+                            <div className="flex-1 justify-end hidden md:flex">
+                                <BackButton to="/" />
+                            </div>
+
                             {/* Menú móvil */}
-                            <div className="flex-1 flex justify-end">
-                                <MobileMenu onNavigateBack={handleNavigateBack} />
+                            <div className="md:hidden">
+                                <MobileMenu onNavigateBack={() => navigate('/')} />
                             </div>
                         </div>
                     </div>
