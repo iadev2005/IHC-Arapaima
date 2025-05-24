@@ -74,7 +74,7 @@ export function MobileMenu({ onNavigateBack }: MobileMenuProps) {
             >
                 <div className="flex items-center justify-center w-6 h-6">
                     <img
-                        src="/src/assets/icons/burger-menu-svgrepo-com.svg"
+                        src="/assets/icons/burger-menu-svgrepo-com.svg"
                         alt={isOpen ? "Cerrar menú" : "Abrir menú"}
                         className="w-5 h-5 object-contain"
                     />
@@ -113,7 +113,7 @@ export function MobileMenu({ onNavigateBack }: MobileMenuProps) {
                                     className="flex justify-center bg-black/95 p-4 rounded-lg backdrop-blur-sm"
                                 >
                                     <img
-                                        src="/src/assets/logo/logo.svg"
+                                        src="/assets/logo/logo.svg"
                                         alt="Logo"
                                         className="w-32 h-auto"
                                     />
@@ -130,7 +130,7 @@ export function MobileMenu({ onNavigateBack }: MobileMenuProps) {
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     <img
-                                        src="/src/assets/icons/back.png"
+                                        src="/assets/icons/back.png"
                                         alt="Volver"
                                         className="w-6 h-6"
                                     />
@@ -148,7 +148,7 @@ export function MobileMenu({ onNavigateBack }: MobileMenuProps) {
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     <img
-                                        src="/src/assets/icons/house-chimney-blank-svgrepo-com.svg"
+                                        src="/assets/icons/house-chimney-blank-svgrepo-com.svg"
                                         alt="Inicio"
                                         className="w-6 h-6 invert"
                                     />

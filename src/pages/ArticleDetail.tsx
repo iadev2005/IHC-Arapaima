@@ -105,7 +105,7 @@ export function ArticleDetail() {
                 <motion.div
                     className="relative w-full h-full flex flex-col text-white"
                     style={{
-                        backgroundImage: "url('/src/assets/background/background-culture.png')",
+                        backgroundImage: "url('/assets/background/background-culture.png')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
@@ -182,7 +182,7 @@ export function ArticleDetail() {
                                     variants={iconAnimation}
                                 >
                                     <img 
-                                        src="/src/assets/icons/culture.png"
+                                        src="/assets/icons/culture.png"
                                         alt="Culture Icon"
                                         className="w-full h-full object-contain"
                                     />
@@ -202,7 +202,7 @@ export function ArticleDetail() {
                                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                             >
                                 <img
-                                    src="/src/assets/logo/logo.svg"
+                                    src="/assets/logo/logo.svg"
                                     alt="Logo"
                                     className="w-60 h-auto"
                                     style={{ userSelect: 'none' }}
@@ -218,7 +218,7 @@ export function ArticleDetail() {
                                     transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                                 >
                                     <img
-                                        src="/src/assets/icons/back.png"
+                                        src="/assets/icons/back.png"
                                         alt="Volver"
                                         className="w-12 h-12"
                                     />

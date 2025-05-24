@@ -170,7 +170,7 @@ export function Library() {
                     className="relative w-full h-full flex flex-col items-center justify-start text-white"
                     variants={contentAnimation}
                     style={{
-                        backgroundImage: "url('/src/assets/background/background-library.png')",
+                        backgroundImage: "url('/assets/background/background-library.png')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         overflow: 'hidden'
@@ -185,7 +185,7 @@ export function Library() {
                                     variants={iconAnimation}
                                 >
                                     <img 
-                                        src="/src/assets/icons/library.png"
+                                        src="/assets/icons/library.png"
                                         alt="Library Icon"
                                         className="w-full h-full object-contain"
                                     />
@@ -206,7 +206,7 @@ export function Library() {
                                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                             >
                                 <img
-                                    src="/src/assets/logo/logo.svg"
+                                    src="/assets/logo/logo.svg"
                                     alt="Logo"
                                     className="w-40 md:w-60 h-auto"
                                 />
@@ -242,7 +242,7 @@ export function Library() {
                                         <defs>
                                             <mask id="mask-library">
                                                 <image
-                                                    href="/src/assets/icons/mask-library.svg"
+                                                    href="/assets/icons/mask-library.svg"
                                                     width="100%"
                                                     height="100%"
                                                     preserveAspectRatio="xMidYMid meet"
@@ -293,7 +293,7 @@ export function Library() {
                                                 <defs>
                                                     <mask id={`mask-left-${index}`}>
                                                         <image
-                                                            href="/src/assets/icons/library-left.svg"
+                                                            href="/assets/icons/library-left.svg"
                                                             width="100%"
                                                             height="100%"
                                                             preserveAspectRatio="xMidYMid meet"
@@ -323,7 +323,7 @@ export function Library() {
                                         <defs>
                                             <mask id="mask-center">
                                                 <image
-                                                    href="/src/assets/icons/library-center.svg"
+                                                    href="/assets/icons/library-center.svg"
                                                     width="100%"
                                                     height="100%"
                                                     preserveAspectRatio="xMidYMid meet"
@@ -354,7 +354,7 @@ export function Library() {
                                                 <defs>
                                                     <mask id={`mask-right-${index}`}>
                                                         <image
-                                                            href="/src/assets/icons/library-right.svg"
+                                                            href="/assets/icons/library-right.svg"
                                                             width="100%"
                                                             height="100%"
                                                             preserveAspectRatio="xMidYMid meet"

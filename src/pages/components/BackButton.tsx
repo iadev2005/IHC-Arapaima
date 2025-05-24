@@ -21,7 +21,7 @@ export function BackButton({ to = '/', className = '' }: BackButtonProps) {
             transition={{ type: 'spring', stiffness: 400, damping: 10 }}
         >
             <img
-                src="/src/assets/icons/back.png"
+                src="/assets/icons/back.png"
                 alt="Volver"
                 className="w-12 h-12"
             />

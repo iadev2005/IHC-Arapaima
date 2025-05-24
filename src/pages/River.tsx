@@ -314,7 +314,7 @@ const LegendSection = () => {
                     <div className="sticky top-8">
                         <div className="h-[300px] md:h-[400px] lg:h-[600px]">
                             <img 
-                                src="/src/assets/icons/orinoco-caroni.avif" 
+                                src="/assets/icons/orinoco-caroni.avif" 
                                 alt="Confluencia del Orinoco y el Caroní" 
                                 className="w-full h-full object-cover object-center rounded-2xl shadow-2xl"
                             />
@@ -350,7 +350,7 @@ export function River() {
                 <motion.div
                     className="relative w-full h-full flex flex-col"
                     style={{
-                        backgroundImage: "url('/src/assets/background/background_river.svg')",
+                        backgroundImage: "url('/assets/background/background_river.svg')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
@@ -367,7 +367,7 @@ export function River() {
                                     variants={iconAnimation}
                                 >
                                     <img 
-                                        src="/src/assets/icons/river.png"
+                                        src="/assets/icons/river.png"
                                         alt="River Icon"
                                         className="w-full h-full object-contain"
                                     />
@@ -390,7 +390,7 @@ export function River() {
                                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                             >
                                 <img
-                                    src="/src/assets/logo/logo.svg"
+                                    src="/assets/logo/logo.svg"
                                     alt="Logo"
                                     className="w-40 md:w-60 h-auto"
                                 />

@@ -190,7 +190,7 @@ export function Culture() {
                     className="relative w-full h-full flex flex-col items-center justify-start text-white"
                     variants={contentAnimation}
                     style={{
-                        backgroundImage: "url('/src/assets/background/background-culture.png')",
+                        backgroundImage: "url('/assets/background/background-culture.png')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         overflow: 'hidden'
@@ -205,7 +205,7 @@ export function Culture() {
                                     variants={iconAnimation}
                                 >
                                     <img 
-                                        src="/src/assets/icons/culture.png"
+                                        src="/assets/icons/culture.png"
                                         alt="Culture Icon"
                                         className="w-full h-full object-contain"
                                     />
@@ -282,7 +282,7 @@ export function Culture() {
                                                         <defs>
                                                             <mask id="mask">
                                                                 <image
-                                                                    href="/src/assets/icons/mask.svg"
+                                                                    href="/assets/icons/mask.svg"
                                                                     width="100%"
                                                                     height="100%"
                                                                     preserveAspectRatio="xMidYMid slice"
@@ -342,14 +342,14 @@ export function Culture() {
                                 transition={{ type: 'spring', stiffness: 300 }}
                             >
                                 <motion.img
-                                    src="/src/assets/icons/arrow-left.svg"
+                                    src="/assets/icons/arrow-left.svg"
                                     alt="Flecha izquierda"
                                     className="w-8 h-8 md:w-12 md:h-12"
                                     whileHover={{ opacity: 0 }}
                                     transition={{ duration: 0.2 }}
                                 />
                                 <motion.img
-                                    src="/src/assets/icons/arrow-left-hover.svg"
+                                    src="/assets/icons/arrow-left-hover.svg"
                                     alt="Flecha izquierda hover"
                                     className="w-8 h-8 md:w-12 md:h-12 absolute top-2 md:top-4 left-2 md:left-4"
                                     initial={{ opacity: 0 }}
@@ -365,14 +365,14 @@ export function Culture() {
                                 transition={{ type: 'spring', stiffness: 300 }}
                             >
                                 <motion.img
-                                    src="/src/assets/icons/arrow-right.svg"
+                                    src="/assets/icons/arrow-right.svg"
                                     alt="Flecha derecha"
                                     className="w-8 h-8 md:w-12 md:h-12"
                                     whileHover={{ opacity: 0 }}
                                     transition={{ duration: 0.2 }}
                                 />
                                 <motion.img
-                                    src="/src/assets/icons/arrow-right-hover.svg"
+                                    src="/assets/icons/arrow-right-hover.svg"
                                     alt="Flecha derecha hover"
                                     className="w-8 h-8 md:w-12 md:h-12 absolute top-2 md:top-4 left-2 md:left-4"
                                     initial={{ opacity: 0 }}

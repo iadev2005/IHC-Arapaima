@@ -216,7 +216,7 @@ export function Forum() {
                     className="relative w-full h-full flex flex-col text-white overflow-y-auto custom-scrollbar-blue"
                     variants={contentAnimation}
                     style={{
-                        backgroundImage: "url('/src/assets/background/background-forum.png')",
+                        backgroundImage: "url('/assets/background/background-forum.png')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
@@ -230,7 +230,7 @@ export function Forum() {
                                     variants={iconAnimation}
                                 >
                                     <img 
-                                        src="/src/assets/icons/forum.png"
+                                        src="/assets/icons/forum.png"
                                         alt="Forum Icon"
                                         className="w-full h-full object-contain"
                                     />
@@ -251,7 +251,7 @@ export function Forum() {
                                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                             >
                                 <img
-                                    src="/src/assets/logo/logo.svg"
+                                    src="/assets/logo/logo.svg"
                                     alt="Logo"
                                     className="w-40 md:w-60 h-auto"
                                 />
