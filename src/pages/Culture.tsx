@@ -3,6 +3,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import articles from '@/data/data.json';
 import { MobileMenu } from './components/MobileMenu';
+import { BackButton } from './components/BackButton';
 
 const overlayTransition = {
     initial: {
@@ -217,21 +218,13 @@ export function Culture() {
                                 </motion.h2>
                             </div>
 
-                            <motion.div
-                                className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer hidden md:block"
-                                onClick={() => navigate('/')}
-                                whileHover={{ scale: 1.05 }}
-                                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                            >
-                                <img
-                                    src="/src/assets/logo/logo.svg"
-                                    alt="Logo"
-                                    className="w-40 md:w-60 h-auto"
-                                />
-                            </motion.div>
+                            {/* Botón de volver para desktop */}
+                            <div className="flex-1 justify-end hidden md:flex">
+                                <BackButton to="/" />
+                            </div>
 
                             {/* Menú móvil */}
-                            <div className="flex-1 flex justify-end">
+                            <div className="md:hidden">
                                 <MobileMenu onNavigateBack={() => navigate('/')} />
                             </div>
                         </div>

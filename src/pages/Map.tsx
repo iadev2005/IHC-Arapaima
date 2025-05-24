@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 import { MobileMenu } from './components/MobileMenu';
+import { BackButton } from './components/BackButton';
 
 // Tipos
 type RegionData = {
@@ -416,22 +417,14 @@ export function Map() {
                                 />
                             </motion.div>
 
-                            {/* Botón de volver para desktop y menú móvil */}
-                            <div className="flex-1 flex justify-end">
-                                <motion.div
-                                    className="hidden md:flex items-center gap-2 cursor-pointer group"
-                                    onClick={handleNavigateBack}
-                                >
-                                    <motion.img
-                                        src="/src/assets/icons/arrow-left.svg"
-                                        alt="Volver"
-                                        className="w-8 h-8 transition-transform group-hover:-translate-x-1"
-                                    />
-                                    <span className="text-white text-xl">Volver</span>
-                                </motion.div>
-                                <div className="md:hidden">
-                                    <MobileMenu onNavigateBack={handleNavigateBack} />
-                                </div>
+                            {/* Botón de volver para desktop */}
+                            <div className="flex-1 justify-end hidden md:flex">
+                                <BackButton to="/aqua" />
+                            </div>
+
+                            {/* Menú móvil */}
+                            <div className="md:hidden">
+                                <MobileMenu onNavigateBack={() => navigate('/aqua')} />
                             </div>
                         </div>
                     </div>

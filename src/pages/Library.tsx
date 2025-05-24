@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getLibraryData, subscribeToLibraryChanges, type LibraryData } from '@/services/libraryService';
 import { MobileMenu } from './components/MobileMenu';
+import { BackButton } from './components/BackButton';
 
 // Componente de pincelada SVG para la máscara
 const BrushStrokeMask = () => (
@@ -197,6 +198,7 @@ export function Library() {
                                 </motion.h2>
                             </div>
 
+                            {/* Logo de la página */}
                             <motion.div
                                 className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer hidden md:block"
                                 onClick={() => navigate('/')}
@@ -210,9 +212,14 @@ export function Library() {
                                 />
                             </motion.div>
 
+                            {/* Botón de volver para desktop */}
+                            <div className="flex-1 justify-end hidden md:flex">
+                                <BackButton to="/" />
+                            </div>
+
                             {/* Menú móvil */}
-                            <div className="flex-1 flex justify-end">
-                                <MobileMenu onNavigateBack={handleNavigateBack} />
+                            <div className="md:hidden">
+                                <MobileMenu onNavigateBack={() => navigate('/')} />
                             </div>
                         </div>
                     </div>
