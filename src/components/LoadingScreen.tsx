@@ -7,8 +7,8 @@ interface LoadingScreenProps {
 }
 
 export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
-  const { isLoading, progress, hasCachedData } = useLoading({
-    minLoadingTime: 1500,
+  const { isLoading, progress, hasCachedData, loadingMessage } = useLoading({
+    minLoadingTime: 2000,
     checkCache: true
   });
 
@@ -53,14 +53,14 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
           Arapaima
         </motion.h1>
 
-        {/* Subtítulo */}
+        {/* Mensaje de carga dinámico */}
         <motion.p
-          className="text-lg text-gray-300 mb-8"
+          className="text-lg text-gray-300 mb-8 min-h-[1.5rem]"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          {hasCachedData ? 'Cargando desde caché...' : 'Cargando recursos...'}
+          {loadingMessage}
         </motion.p>
 
         {/* Barra de progreso */}
