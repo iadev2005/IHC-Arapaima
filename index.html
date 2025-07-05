@@ -1,10 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/logo/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arapaima</title>
+    <meta name="description" content="Arapaima - Cultura del Agua" />
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Preconnect to Google Fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <!-- Load Google Fonts with font-display: swap for better performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" /></noscript>
+    
+    <!-- Preload critical images for better performance -->
+    <link rel="preload" href="/assets/background/fire.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="/assets/logo/logo.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="/assets/background/background-desktop.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/assets/chatbot/kuai-mare-1.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="/assets/icons/fire.svg" as="image" type="image/svg+xml" />
+    
+    <!-- Configuración para extensiones de desarrollo -->
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="unsafe-none" />
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="unsafe-none" />
+    
+    <!-- Script para prevenir listeners de unload deprecados -->
+    <script>
+      // Prevenir que las extensiones agreguen listeners de unload deprecados
+      const originalAddEventListener = window.addEventListener;
+      window.addEventListener = function(type, listener, options) {
+        if (type === 'unload' || type === 'beforeunload') {
+          // No permitir listeners de unload deprecados
+          return;
+        }
+        return originalAddEventListener.call(this, type, listener, options);
+      };
+      
+      // Prevenir que las extensiones accedan a reglas CSS protegidas
+      const originalGetComputedStyle = window.getComputedStyle;
+      window.getComputedStyle = function(element, pseudoElement) {
+        try {
+          return originalGetComputedStyle.call(this, element, pseudoElement);
+        } catch (e) {
+          if (e.name === 'SecurityError') {
+            return null;
+          }
+          throw e;
+        }
+      };
+    </script>
+    
+    <title>Arapaima - Cultura del Agua</title>
   </head>
   <body>
     <div id="root"></div>

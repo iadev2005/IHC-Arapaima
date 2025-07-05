@@ -116,43 +116,188 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Slackey', cursive;
   }
 }
 
-/* Estilos personalizados para la barra de scroll */
-.custom-scrollbar::-webkit-scrollbar {
+/* Scrollbars optimizados - Un solo estilo reutilizable */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
     width: 8px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-white/10 rounded;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-white/30 rounded hover:bg-white/50 transition-colors;
+  }
+  
+  /* Variante para temas oscuros */
+  .scrollbar-thin-dark::-webkit-scrollbar-thumb {
+    @apply bg-black/30 hover:bg-black/50;
+  }
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+/* Estilos personalizados para scrollbar */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(179, 143, 37, 0.5);
-    border-radius: 4px;
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(179, 143, 37, 0.7);
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #1e3a8a; /* Azul marino */
+  border-radius: 4px;
 }
 
-/* Estilos personalizados para la barra de scroll - Tema azul (River) */
-.custom-scrollbar-blue::-webkit-scrollbar {
-    width: 8px;
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #1e40af; /* Azul marino más claro al hover */
 }
 
-.custom-scrollbar-blue::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+/* Para Firefox */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: #1e3a8a transparent;
 }
 
-.custom-scrollbar-blue::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
+/* Estilos personalizados para scrollbar azul royal */
+.scrollbar-cyan::-webkit-scrollbar {
+  width: 8px;
 }
 
-.custom-scrollbar-blue::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.7);
+.scrollbar-cyan::-webkit-scrollbar-track {
+  background: transparent;
 }
+
+.scrollbar-cyan::-webkit-scrollbar-thumb {
+  background: #4169e1; /* Azul royal - mismo que se usa en River.tsx */
+  border-radius: 4px;
+}
+
+.scrollbar-cyan::-webkit-scrollbar-thumb:hover {
+  background: #3151b1; /* Azul royal más oscuro al hover */
+}
+
+/* Para Firefox */
+.scrollbar-cyan {
+  scrollbar-width: thin;
+  scrollbar-color: #4169e1 transparent;
+}
+
+/* Estilos personalizados para scrollbar dorada/amarilla */
+.scrollbar-gold::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-gold::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-gold::-webkit-scrollbar-thumb {
+  background: #b38f25; /* Dorado - mismo que se usa en Map.tsx */
+  border-radius: 4px;
+}
+
+.scrollbar-gold::-webkit-scrollbar-thumb:hover {
+  background: #8f6d0d; /* Dorado más oscuro al hover */
+}
+
+/* Para Firefox */
+.scrollbar-gold {
+  scrollbar-width: thin;
+  scrollbar-color: #b38f25 transparent;
+}
+
+/* Estilos personalizados para scrollbar marrón rojizo */
+.scrollbar-brown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-brown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-brown::-webkit-scrollbar-thumb {
+  background: #633d38; /* Marrón rojizo */
+  border-radius: 4px;
+}
+
+.scrollbar-brown::-webkit-scrollbar-thumb:hover {
+  background: #4a2e2a; /* Marrón rojizo más oscuro al hover */
+}
+
+/* Para Firefox */
+.scrollbar-brown {
+  scrollbar-width: thin;
+  scrollbar-color: #633d38 transparent;
+}
+
+/* Estilos personalizados para scrollbar verde oliva */
+.scrollbar-olive::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-olive::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-olive::-webkit-scrollbar-thumb {
+  background: #66691f; /* Verde oliva */
+  border-radius: 4px;
+}
+
+.scrollbar-olive::-webkit-scrollbar-thumb:hover {
+  background: #7a7d25; /* Verde oliva más brillante al hover */
+}
+
+/* Para Firefox */
+.scrollbar-olive {
+  scrollbar-width: thin;
+  scrollbar-color: #66691f transparent;
+}
+
+/* Estilos personalizados para scrollbar verde cultura */
+.scrollbar-culture::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-culture::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-culture::-webkit-scrollbar-thumb {
+  background: #28650a; /* Verde cultura */
+  border-radius: 4px;
+}
+
+.scrollbar-culture::-webkit-scrollbar-thumb:hover {
+  background: #1f4d08; /* Verde cultura más oscuro al hover */
+}
+
+/* Para Firefox */
+.scrollbar-culture {
+  scrollbar-width: thin;
+  scrollbar-color: #28665a transparent;
+}
+
+/* Fondo desktop optimizado: WebP si es soportado, PNG como fallback */
+.bg-desktop {
+  background-image: url('/assets/background/background-desktop.png');
+}
+@supports (background-image: url("image.webp")) {
+  .bg-desktop {
+    background-image: url('/assets/background/background-desktop.webp');
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

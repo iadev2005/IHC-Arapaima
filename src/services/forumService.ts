@@ -1,4 +1,4 @@
-import forumData from '@/data/forumData.json';
+import forumData from '@/data/forum/posts.json';
 
 // Definición de tipos
 export interface Comment {

@@ -1,4 +1,4 @@
-import libraryData from '@/data/library.json';
+import libraryData from '@/data/culture/books.json';
 
 // Definición de tipos
 export interface Book {

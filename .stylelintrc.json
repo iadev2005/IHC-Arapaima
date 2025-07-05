@@ -1,0 +1,29 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "layer",
+          "theme",
+          "custom-variant"
+        ]
+      }
+    ],
+    "at-rule-no-deprecated": null,
+    "no-descending-specificity": null,
+    "import-notation": null,
+    "lightness-notation": null,
+    "hue-degree-notation": null,
+    "font-family-name-quotes": null,
+    "declaration-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "at-rule-empty-line-before": null
+  }
+} 
