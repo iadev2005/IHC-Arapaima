@@ -3,6 +3,9 @@ import { Border } from '@/components/ui/Border';
 import { AquariumPage, LibraryPage, CulturePage, ForumPage, ArticleDetailPage, PostDetailPage } from '@/pages';
 import { motion, AnimatePresence, easeOut, easeIn } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
+import { LoadingScreen } from '@/components/LoadingScreen';
+import { useLoading } from '@/hooks/useLoading';
+
 
 import { Aqua } from '../water/WaterPage';
 import { Map } from '../map/MapPage';
@@ -569,9 +572,12 @@ function Home() {
 }
 
 export default function App() {
+  const { resetLoading } = useLoading();
+
   return (
+    <>
+              <LoadingScreen onLoadingComplete={resetLoading} />
     <Router>
-      <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aqua" element={<Aqua />} />
@@ -584,7 +590,7 @@ export default function App() {
           <Route path="/post/:id" element={<PostDetailPage />} />
           <Route path="/river" element={<River />} />
         </Routes>
-      </AnimatePresence>
     </Router>
+    </>
   );
 }

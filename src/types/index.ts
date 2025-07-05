@@ -60,7 +60,7 @@ export interface User {
 export type VoteType = 'up' | 'down' | null;
 export interface UserVotes {
     [postId: number]: VoteType;
-}
+} 
 
 // Forum types
 export * from './forum';

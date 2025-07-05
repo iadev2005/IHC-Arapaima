@@ -10,4 +10,6 @@ export { VoteButton } from './features/VoteButton';
 export { Button } from './ui/Button';
 export { Input } from './ui/Input';
 export { Icon, Icons } from './ui/Icon';
-export { Form } from './ui/Form'; 
+export { Form } from './ui/Form';
+export { Border } from './ui/Border';
+export { LoadingScreen } from './LoadingScreen'; 
